@@ -1,0 +1,6 @@
+framework module DWAdapter {
+  umbrella header "DWAdapter-umbrella.h"
+
+  export *
+  module * { export * }
+}

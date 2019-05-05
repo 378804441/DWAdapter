@@ -12,8 +12,7 @@ Pod::Spec.new do |s|
   s.license            = { :type => 'MIT', :file => 'LICENSE' }
   s.author             = { 'dingwei' => '378804441@qq.com' }
   s.source             = { :git => 'https://github.com/378804441/DWAdapter.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-  s.source_files       = 'DWBaseAdapter/Classes/**/*'
+  #s.source_files       = 'DWBaseAdapter/Classes/**/*'
   s.ios.deployment_target = '8.0'
 
   s.subspec 'Handler' do |ss|

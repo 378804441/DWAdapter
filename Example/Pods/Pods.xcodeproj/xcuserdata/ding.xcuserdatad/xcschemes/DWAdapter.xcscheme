@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "153B0FDFCCAC3D691266C63E8BA368BC"
+               BlueprintIdentifier = "55840D3221AE1EAB015141F2910036FB"
                BlueprintName = "DWAdapter"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "DWAdapter.framework">

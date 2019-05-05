@@ -12,7 +12,11 @@ Pod::Spec.new do |s|
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
     s.author           = { 'dingwei' => '378804441@qq.com' }
     s.source           = { :git => 'https://github.com/378804441/DWAdapter.git', :tag => s.version.to_s }
+    s.source_files     = 'DWAdapter/Classes/**/*'
     s.ios.deployment_target = '8.0'
-    s.source_files = 'DWAdapter/Classes/**/*'
-    
+
+    ###########   路径规划   ###########
+    # s.subspec 'Handler' do |ss|
+    #   ss.source_files = 'DWAdapter/Classes/**/*.{h,m}'
+    # end
 end

@@ -17,12 +17,12 @@ DWBaseAdapter is available through [CocoaPods](https://cocoapods.org). To instal
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'DWBaseAdapter'
+pod 'DWAdapter'
 ```
 
 ## Author
 
-378804441@qq.com, dingwei2014@xiaochuankeji.cn
+378804441@qq.com
 
 ## License
 

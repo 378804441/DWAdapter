@@ -1,0 +1,22 @@
+{
+  "name": "DWAdapter",
+  "version": "0.1.0",
+  "summary": "A short description of DWAdapter.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/378804441@qq.com/DWAdapter",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "378804441@qq.com": "dingwei2014@xiaochuankeji.cn"
+  },
+  "source": {
+    "git": "https://github.com/378804441@qq.com/DWAdapter.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "DWAdapter/Classes/**/*"
+}

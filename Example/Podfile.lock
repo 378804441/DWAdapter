@@ -1,5 +1,7 @@
 PODS:
-  - DWAdapter (0.1.0)
+  - DWAdapter (0.1.0):
+    - DWAdapter/Handler (= 0.1.0)
+  - DWAdapter/Handler (0.1.0)
   - FBSnapshotTestCase (2.1.4):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
   - FBSnapshotTestCase/Core (2.1.4)
@@ -22,7 +24,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  DWAdapter: 29d7617d87c6f494f2d3c4cff4f28e84dca0e627
+  DWAdapter: 745eb0c38d5047c23d5f021733983d838028e8a9
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   Kiwi: fbeafef0f00e4d8f7dcb3420a4930afe70af77f7
 

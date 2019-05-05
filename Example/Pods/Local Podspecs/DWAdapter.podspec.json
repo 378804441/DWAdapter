@@ -2,21 +2,27 @@
   "name": "DWAdapter",
   "version": "0.1.0",
   "summary": "A short description of DWAdapter.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/378804441@qq.com/DWAdapter",
+  "description": "进行tableView 拆分组件化轻量级框架",
+  "homepage": "https://github.com/378804441/DWAdapter",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "378804441@qq.com": "dingwei2014@xiaochuankeji.cn"
+    "dingwei": "378804441@qq.com"
   },
   "source": {
-    "git": "https://github.com/378804441@qq.com/DWAdapter.git",
+    "git": "https://github.com/378804441/DWAdapter.git",
     "tag": "0.1.0"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "DWAdapter/Classes/**/*"
+  "source_files": "DWAdapter/Classes/**/*.{h,m}",
+  "subspecs": [
+    {
+      "name": "Handler",
+      "source_files": "DWAdapter/Classes/**/*.{h,m}"
+    }
+  ]
 }

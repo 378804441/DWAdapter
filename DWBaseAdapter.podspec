@@ -30,7 +30,7 @@ TODO: 进行tableView 拆分组件化轻量级框架
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'DWBaseAdapter/Classes/**/*'
+  s.source_files = 'DWBaseAdapter/Classes/**/*.{h,m}'
   
   # s.resource_bundles = {
   #   'DWBaseAdapter' => ['DWBaseAdapter/Assets/*.png']

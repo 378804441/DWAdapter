@@ -1,0 +1,6 @@
+framework module DWBaseAdapter {
+  umbrella header "DWBaseAdapter-umbrella.h"
+
+  export *
+  module * { export * }
+}

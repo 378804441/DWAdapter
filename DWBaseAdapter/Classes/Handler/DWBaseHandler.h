@@ -14,8 +14,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - public method
 
-/** 初始化handler */
-- (instancetype)initWithController:(id)controller adapter:(id)adapter;
+/** 初始化handler --- VC专用*/
+- (instancetype)initWithController:(id __nullable)controller adapter:(id __nullable)adapter;
+
+/** 初始化handler --- adapter专用*/
+- (instancetype)initWithAdapter:(id __nullable)adapter;
+
 
 /** 删除绑定在该 handler上的 observer */
 - (void)removeObservers;

@@ -10,7 +10,7 @@
 
 @implementation DWBaseHandler
 
-- (instancetype)initWithController:(id)controller adapter:(id)adapter{
+- (instancetype)initWithController:(id __nullable)controller adapter:(id __nullable)adapter{
     self = [super init];
     if (self) {
         if (controller) {
@@ -23,6 +23,10 @@
     return self;
 }
 
+/** 初始化handler --- adapter专用*/
+- (instancetype)initWithAdapter:(id __nullable)adapter{
+    return [self initWithController:nil adapter:adapter];
+}
 
 #pragma mark - punlic method
 

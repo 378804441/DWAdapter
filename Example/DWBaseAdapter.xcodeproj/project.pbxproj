@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3539D7DF227FBF0200D36866 /* ViewAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3539D7CE227FBF0200D36866 /* ViewAdapter.m */; };
+		3539D7E0227FBF0200D36866 /* ViewAdapterGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3539D7D0227FBF0200D36866 /* ViewAdapterGroup.m */; };
+		3539D7E1227FBF0200D36866 /* CellModel2.m in Sources */ = {isa = PBXBuildFile; fileRef = 3539D7D3227FBF0200D36866 /* CellModel2.m */; };
+		3539D7E2227FBF0200D36866 /* ViewAdapterTypeCell4.m in Sources */ = {isa = PBXBuildFile; fileRef = 3539D7D5227FBF0200D36866 /* ViewAdapterTypeCell4.m */; };
+		3539D7E3227FBF0200D36866 /* ViewAdapterTypeCell3.m in Sources */ = {isa = PBXBuildFile; fileRef = 3539D7D8227FBF0200D36866 /* ViewAdapterTypeCell3.m */; };
+		3539D7E4227FBF0200D36866 /* ViewAdapterTypeCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = 3539D7DA227FBF0200D36866 /* ViewAdapterTypeCell2.m */; };
+		3539D7E5227FBF0200D36866 /* ViewAdapterTypeCell5.m in Sources */ = {isa = PBXBuildFile; fileRef = 3539D7DC227FBF0200D36866 /* ViewAdapterTypeCell5.m */; };
+		3539D7E6227FBF0200D36866 /* ViewAdapterTypeCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 3539D7DE227FBF0200D36866 /* ViewAdapterTypeCell1.m */; };
 		513ED3F3BFD9F1E513EA7353 /* Pods_DWBaseAdapter_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B4F43B0517538DD1B7D0BBB /* Pods_DWBaseAdapter_Example.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -37,9 +45,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		25C69E8D1BC10D75665D49E6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		25C69E8D1BC10D75665D49E6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		3539D7CD227FBF0200D36866 /* ViewAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewAdapter.h; sourceTree = "<group>"; };
+		3539D7CE227FBF0200D36866 /* ViewAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewAdapter.m; sourceTree = "<group>"; };
+		3539D7CF227FBF0200D36866 /* ViewAdapterGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewAdapterGroup.h; sourceTree = "<group>"; };
+		3539D7D0227FBF0200D36866 /* ViewAdapterGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewAdapterGroup.m; sourceTree = "<group>"; };
+		3539D7D2227FBF0200D36866 /* CellModel2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellModel2.h; sourceTree = "<group>"; };
+		3539D7D3227FBF0200D36866 /* CellModel2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellModel2.m; sourceTree = "<group>"; };
+		3539D7D5227FBF0200D36866 /* ViewAdapterTypeCell4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewAdapterTypeCell4.m; sourceTree = "<group>"; };
+		3539D7D6227FBF0200D36866 /* ViewAdapterTypeCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewAdapterTypeCell2.h; sourceTree = "<group>"; };
+		3539D7D7227FBF0200D36866 /* ViewAdapterTypeCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewAdapterTypeCell1.h; sourceTree = "<group>"; };
+		3539D7D8227FBF0200D36866 /* ViewAdapterTypeCell3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewAdapterTypeCell3.m; sourceTree = "<group>"; };
+		3539D7D9227FBF0200D36866 /* ViewAdapterTypeCell5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewAdapterTypeCell5.h; sourceTree = "<group>"; };
+		3539D7DA227FBF0200D36866 /* ViewAdapterTypeCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewAdapterTypeCell2.m; sourceTree = "<group>"; };
+		3539D7DB227FBF0200D36866 /* ViewAdapterTypeCell4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewAdapterTypeCell4.h; sourceTree = "<group>"; };
+		3539D7DC227FBF0200D36866 /* ViewAdapterTypeCell5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewAdapterTypeCell5.m; sourceTree = "<group>"; };
+		3539D7DD227FBF0200D36866 /* ViewAdapterTypeCell3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewAdapterTypeCell3.h; sourceTree = "<group>"; };
+		3539D7DE227FBF0200D36866 /* ViewAdapterTypeCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewAdapterTypeCell1.m; sourceTree = "<group>"; };
 		3B4F43B0517538DD1B7D0BBB /* Pods_DWBaseAdapter_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DWBaseAdapter_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		400849C841815377644A2817 /* DWBaseAdapter.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = DWBaseAdapter.podspec; path = ../DWBaseAdapter.podspec; sourceTree = "<group>"; };
+		400849C841815377644A2817 /* DWBaseAdapter.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DWBaseAdapter.podspec; path = ../DWBaseAdapter.podspec; sourceTree = "<group>"; };
 		4E423E201878E8C25A5227FA /* Pods_DWBaseAdapter_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DWBaseAdapter_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F5C14BA62D5BBA739DDB813 /* Pods-DWBaseAdapter_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DWBaseAdapter_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DWBaseAdapter_Tests/Pods-DWBaseAdapter_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* DWBaseAdapter_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DWBaseAdapter_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,9 +88,9 @@
 		63F61080A66E0EFDFEFE65E3 /* Pods-DWBaseAdapter_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DWBaseAdapter_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-DWBaseAdapter_Example/Pods-DWBaseAdapter_Example.release.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80194E55FAFDF75FB34E94C1 /* Pods-DWBaseAdapter_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DWBaseAdapter_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DWBaseAdapter_Tests/Pods-DWBaseAdapter_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D3963C03AB541063B6C09021 /* Pods-DWBaseAdapter_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DWBaseAdapter_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DWBaseAdapter_Example/Pods-DWBaseAdapter_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		E7ED7CDFD0806B7762BBE7DB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		E7ED7CDFD0806B7762BBE7DB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +119,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3539D7D1227FBF0200D36866 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3539D7D2227FBF0200D36866 /* CellModel2.h */,
+				3539D7D3227FBF0200D36866 /* CellModel2.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3539D7D4227FBF0200D36866 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3539D7D5227FBF0200D36866 /* ViewAdapterTypeCell4.m */,
+				3539D7D6227FBF0200D36866 /* ViewAdapterTypeCell2.h */,
+				3539D7D7227FBF0200D36866 /* ViewAdapterTypeCell1.h */,
+				3539D7D8227FBF0200D36866 /* ViewAdapterTypeCell3.m */,
+				3539D7D9227FBF0200D36866 /* ViewAdapterTypeCell5.h */,
+				3539D7DA227FBF0200D36866 /* ViewAdapterTypeCell2.m */,
+				3539D7DB227FBF0200D36866 /* ViewAdapterTypeCell4.h */,
+				3539D7DC227FBF0200D36866 /* ViewAdapterTypeCell5.m */,
+				3539D7DD227FBF0200D36866 /* ViewAdapterTypeCell3.h */,
+				3539D7DE227FBF0200D36866 /* ViewAdapterTypeCell1.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		3539D7E7227FBF0A00D36866 /* file */ = {
+			isa = PBXGroup;
+			children = (
+				6003F59C195388D20070C39A /* DWAppDelegate.h */,
+				6003F59D195388D20070C39A /* DWAppDelegate.m */,
+				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
+				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
+				6003F5A8195388D20070C39A /* Images.xcassets */,
+			);
+			name = file;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -132,14 +194,16 @@
 		6003F593195388D20070C39A /* Example for DWBaseAdapter */ = {
 			isa = PBXGroup;
 			children = (
-				6003F59C195388D20070C39A /* DWAppDelegate.h */,
-				6003F59D195388D20070C39A /* DWAppDelegate.m */,
-				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
+				3539D7D4227FBF0200D36866 /* Cells */,
+				3539D7E7227FBF0A00D36866 /* file */,
+				3539D7D1227FBF0200D36866 /* Model */,
+				6003F594195388D20070C39A /* Supporting Files */,
+				3539D7CD227FBF0200D36866 /* ViewAdapter.h */,
+				3539D7CE227FBF0200D36866 /* ViewAdapter.m */,
+				3539D7CF227FBF0200D36866 /* ViewAdapterGroup.h */,
+				3539D7D0227FBF0200D36866 /* ViewAdapterGroup.m */,
 				6003F5A5195388D20070C39A /* DWViewController.h */,
 				6003F5A6195388D20070C39A /* DWViewController.m */,
-				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
-				6003F5A8195388D20070C39A /* Images.xcassets */,
-				6003F594195388D20070C39A /* Supporting Files */,
 			);
 			name = "Example for DWBaseAdapter";
 			path = DWBaseAdapter;
@@ -392,8 +456,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3539D7DF227FBF0200D36866 /* ViewAdapter.m in Sources */,
+				3539D7E2227FBF0200D36866 /* ViewAdapterTypeCell4.m in Sources */,
+				3539D7E3227FBF0200D36866 /* ViewAdapterTypeCell3.m in Sources */,
+				3539D7E4227FBF0200D36866 /* ViewAdapterTypeCell2.m in Sources */,
+				3539D7E5227FBF0200D36866 /* ViewAdapterTypeCell5.m in Sources */,
+				3539D7E6227FBF0200D36866 /* ViewAdapterTypeCell1.m in Sources */,
 				6003F59E195388D20070C39A /* DWAppDelegate.m in Sources */,
+				3539D7E1227FBF0200D36866 /* CellModel2.m in Sources */,
 				6003F5A7195388D20070C39A /* DWViewController.m in Sources */,
+				3539D7E0227FBF0200D36866 /* ViewAdapterGroup.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

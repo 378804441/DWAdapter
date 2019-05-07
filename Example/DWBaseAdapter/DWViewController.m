@@ -7,8 +7,9 @@
 //
 
 #import "DWViewController.h"
-#import "ViewAdapter.h"            // 平铺类型
-#import "ViewAdapterGroup.h"       // 分组类型
+#import "ViewAdapter.h"                 // 平铺类型
+#import "ViewAdapterGroup.h"            // 分组类型
+#import "DWViewControllerHandler.h"     // 事件处理
 
 #define DWSCREENWIDTH [[UIScreen mainScreen] bounds].size.width
 
@@ -44,6 +45,8 @@
     _adapter = [[ViewAdapter alloc] initAdapterWithTableView:self.tableView];
     _adapter.tableProtocolDelegate = self;
     _adapter.securityCellHeight    = CGFLOAT_MIN;
+    DWViewControllerHandler *vcHandler = [[DWViewControllerHandler alloc] initWithController:self adapter:_adapter];
+    
     //    _adapter.closeHighlyCache      = YES;
     
     _groupAdapter = [[ViewAdapterGroup alloc] initAdapterWithTableView:self.tableView];

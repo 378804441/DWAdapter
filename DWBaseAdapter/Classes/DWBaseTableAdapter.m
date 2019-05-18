@@ -87,6 +87,10 @@
     }
 }
 
+-(UIViewController *)controller{
+    return [self getControllerFromView:self.tableView];
+}
+
 
 #pragma mark - tableview dataSource and delegate
 
@@ -267,7 +271,22 @@
 /****************** 获取 rowType END *******************/
 
 
-#pragma mark - 判断是分组还是不分组 DataSource
+#pragma mark - private method
+
+/** 通过View 找到view 依附VC */
+- (UIViewController *)getControllerFromView:(UIView *)view {
+    // 遍历响应者链。返回第一个找到视图控制器
+    UIResponder *responder = view;
+    while ((responder = [responder nextResponder])){
+        if ([responder isKindOfClass: [UIViewController class]]){
+            return (UIViewController *)responder;
+        }
+    }
+    // 如果没有找到则返回nil
+    return nil;
+}
+
+/** 判断是分组还是不分组 DataSource */
 
 -(DWBaseTableAdapterRowEnum)checkRowType{
     if(self.dataSource.count > 0){

@@ -60,6 +60,9 @@ typedef NS_ENUM(NSInteger, DWBaseTableAdapterRowType){
 /** 注册tableView */
 @property (nonatomic, strong, readonly) UITableView *tableView;
 
+/** tableView 依附VC */
+@property (nonatomic, strong, readonly) UIViewController *controller;
+
 
 #pragma mark - public method
 

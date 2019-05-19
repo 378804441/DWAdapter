@@ -14,6 +14,9 @@
 
 @optional /***  可以不实现方法 ***/
 
+/** 初始化数据源 */
+- (NSArray *)loadDataSource;
+
 
 /** 点击协议 */
 -(void)didSelectTableView:(UITableView *)tabView indexPath:(NSIndexPath *)indexPath adapter:(id)adapter;

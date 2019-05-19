@@ -1,22 +1,52 @@
 {
   "name": "DWBaseAdapter",
-  "version": "0.1.0",
+  "version": "1.0.2",
   "summary": "A short description of DWBaseAdapter.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/378804441@qq.com/DWBaseAdapter",
+  "description": "进行tableView 拆分组件化轻量级框架",
+  "homepage": "https://github.com/378804441/DWAdapter",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "378804441@qq.com": "dingwei2014@xiaochuankeji.cn"
+    "dingwei": "378804441@qq.com"
   },
   "source": {
-    "git": "https://github.com/378804441@qq.com/DWBaseAdapter.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/378804441/DWAdapter.git",
+    "tag": "1.0.2"
   },
+  "source_files": "DWBaseAdapter/Classes/*.{h,m}",
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "DWBaseAdapter/Classes/**/*"
+  "subspecs": [
+    {
+      "name": "Category",
+      "source_files": "DWBaseAdapter/Classes/Category/*.{h,m}"
+    },
+    {
+      "name": "Handler",
+      "source_files": "DWBaseAdapter/Classes/Handler/*.{h,m}"
+    },
+    {
+      "name": "Config",
+      "source_files": "DWBaseAdapter/Classes/Config/*.{h,m}"
+    },
+    {
+      "name": "Diff",
+      "source_files": "DWBaseAdapter/Classes/Diff/*.{h,m}"
+    },
+    {
+      "name": "Model",
+      "source_files": "DWBaseAdapter/Classes/Model/*.{h,m}"
+    },
+    {
+      "name": "Protocol",
+      "source_files": "DWBaseAdapter/Classes/Protocol/*.{h,m}"
+    },
+    {
+      "name": "ThreadSafety",
+      "source_files": "DWBaseAdapter/Classes/ThreadSafety/*.{h,m}"
+    }
+  ]
 }

@@ -26,13 +26,27 @@ typedef NS_ENUM(NSInteger, ViewAdapterType){
 
 @interface ViewAdapter() <ViewAdapterTypeCell4Delegate>
 
+@property (nonatomic, strong) NSString *testKey;
+
 @end
 
 @implementation ViewAdapter
 
 
--(NSMutableArray *)instanceDataSource{
+-(NSArray *)loadDataSource{
+    return [self testArray:self.testKey];
+}
+
+
+-(NSArray *)testArray:(NSString * __nullable)str{
+    
     NSMutableArray *dataArray = [NSMutableArray array];
+    
+    if ([str length] > 0) {
+        
+        return [dataArray copy];
+    }
+    
     
     DWBaseTableDataSourceModel *cellModel_1 = [DWBaseTableDataSourceModel initWithTag:ViewAdapterType_cell1 data:@(100) cell:[ViewAdapterTypeCell1 class]];
     [dataArray addObject:cellModel_1];
@@ -56,14 +70,20 @@ typedef NS_ENUM(NSInteger, ViewAdapterType){
     DWBaseTableDataSourceModel *cellModel_5 = [DWBaseTableDataSourceModel initWithTag:ViewAdapterType_cell4 data:nil cell:[ViewAdapterTypeCell5 class]];
     [dataArray addObject:cellModel_5];
     
-    return dataArray;
+    return [dataArray copy];
 }
+
 
 
 #pragma mark - custom delegate
 
 -(void)cell4_clickDelegate{
     NSLog(@"点击了 cell4");
+    self.testKey = @"更改数据源";
+    [self reloadTableView];
+    return;
+    
+    
     NSInteger selectIntger = 1;
     NSMutableArray <DWBaseTableDataSourceModel *>*dataSourceM = [NSMutableArray arrayWithArray:self.dataSource];
     DWBaseTableDataSourceModel *dataModel = [dataSourceM objectAtIndex:selectIntger];

@@ -65,6 +65,7 @@
  */
 -(void)reloadTableViewWithIndexSet:(NSIndexSet *__nullable)indexSet indexPath:(NSIndexPath * __nullable)indexPath{
     NSParameterAssert(self.tableView);
+    self.dataSource = nil;
     if (indexSet) {
         [self.tableView reloadSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];
     }else if(indexPath){

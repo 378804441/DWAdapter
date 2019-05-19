@@ -1,10 +1,10 @@
-EMBEDDED_CONTENT_CONTAINS_SWIFT = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) $(PLATFORM_DIR)/Developer/Library/Frameworks "${PODS_CONFIGURATION_BUILD_DIR}/FBSnapshotTestCase" "${PODS_CONFIGURATION_BUILD_DIR}/Kiwi" "${PODS_CONFIGURATION_BUILD_DIR}/DWBaseAdapter"
+ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$(PLATFORM_DIR)/Developer/Library/Frameworks" "${PODS_CONFIGURATION_BUILD_DIR}/DWBaseAdapter" "${PODS_CONFIGURATION_BUILD_DIR}/FBSnapshotTestCase" "${PODS_CONFIGURATION_BUILD_DIR}/Kiwi"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/DWBaseAdapter/DWBaseAdapter.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Kiwi/Kiwi.framework/Headers"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Kiwi/Kiwi.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/DWBaseAdapter/DWBaseAdapter.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "FBSnapshotTestCase" -framework "Kiwi"
-OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
+OTHER_LDFLAGS = $(inherited) -framework "DWBaseAdapter" -framework "FBSnapshotTestCase" -framework "Foundation" -framework "Kiwi" -framework "QuartzCore" -framework "UIKit" -framework "XCTest"
+OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.

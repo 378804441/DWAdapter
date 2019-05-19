@@ -18,7 +18,7 @@
 @end
 
 @implementation DWBaseTableAdapter
-@synthesize dataSource = _dataSource;
+
 
 #pragma mark - init method
 
@@ -45,20 +45,10 @@
 
 //数据源初始化
 -(NSArray *)dataSource{
-    if(!_dataSource){
-        _dataSource = [[self instanceDataSource] copy];
+    if (!_dataSource) {
+        _dataSource = [self loadDataSource];
     }
     return _dataSource;
-}
-
--(void)setDataSource:(NSArray *)dataSource{
-    _dataSource = dataSource;
-}
-
-// 静态数据源初始化 重写该方法即可
--(NSMutableArray *)instanceDataSource{
-    NSMutableArray *array = [NSMutableArray array];
-    return array;
 }
 
 

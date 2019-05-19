@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "DWBaseTableAdapter.h"
 #import "DWBaseTableAdapter+Action.h"
 #import "DWBaseTableAdapter+Refresh.h"
 #import "DWAdapterCoinf.h"
@@ -19,7 +20,6 @@
 #import "GDiffMoveItem.h"
 #import "GDiffObjectProtocol.h"
 #import "GDiffResult.h"
-#import "DWBaseTableAdapter.h"
 #import "DWBaseHandler.h"
 #import "DWBaseTableDataSourceModel.h"
 #import "DWBaseCellProtocol.h"

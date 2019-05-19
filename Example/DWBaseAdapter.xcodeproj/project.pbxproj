@@ -377,21 +377,17 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-DWBaseAdapter_Example/Pods-DWBaseAdapter_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-DWBaseAdapter_Example/Pods-DWBaseAdapter_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DWBaseAdapter/DWBaseAdapter.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DWBaseAdapter.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DWBaseAdapter_Example/Pods-DWBaseAdapter_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DWBaseAdapter_Example/Pods-DWBaseAdapter_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8476607157F326B79204905B /* [CP] Embed Pods Frameworks */ = {
@@ -399,23 +395,19 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-DWBaseAdapter_Tests/Pods-DWBaseAdapter_Tests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-DWBaseAdapter_Tests/Pods-DWBaseAdapter_Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework",
 				"${BUILT_PRODUCTS_DIR}/Kiwi/Kiwi.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kiwi.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DWBaseAdapter_Tests/Pods-DWBaseAdapter_Tests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DWBaseAdapter_Tests/Pods-DWBaseAdapter_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BF87E7B46A549072992D01B2 /* [CP] Check Pods Manifest.lock */ = {
@@ -614,6 +606,7 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -629,6 +622,7 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -652,6 +646,7 @@
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DWBaseAdapter_Example.app/DWBaseAdapter_Example";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -672,6 +667,7 @@
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DWBaseAdapter_Example.app/DWBaseAdapter_Example";
 				WRAPPER_EXTENSION = xctest;
 			};

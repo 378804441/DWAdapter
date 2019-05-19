@@ -46,9 +46,14 @@
 //数据源初始化
 -(NSArray *)dataSource{
     if (!_dataSource) {
-        _dataSource = [self loadDataSource];
+        _dataSource = [self instanceDataSource];
     }
     return _dataSource;
+}
+
+-(NSArray *)instanceDataSource{
+    NSMutableArray *array = [NSMutableArray array];
+    return [array copy];
 }
 
 

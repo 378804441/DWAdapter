@@ -32,10 +32,10 @@ typedef NS_ENUM(NSInteger, ViewAdapterType){
 
 @implementation ViewAdapter
 
-
--(NSArray *)loadDataSource{
+-(NSArray *)instanceDataSource{
     return [self testArray:self.testKey];
 }
+
 
 
 -(NSArray *)testArray:(NSString * __nullable)str{

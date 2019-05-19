@@ -1,19 +1,19 @@
 PODS:
-  - DWBaseAdapter (1.0.2):
-    - DWBaseAdapter/Category (= 1.0.2)
-    - DWBaseAdapter/Config (= 1.0.2)
-    - DWBaseAdapter/Diff (= 1.0.2)
-    - DWBaseAdapter/Handler (= 1.0.2)
-    - DWBaseAdapter/Model (= 1.0.2)
-    - DWBaseAdapter/Protocol (= 1.0.2)
-    - DWBaseAdapter/ThreadSafety (= 1.0.2)
-  - DWBaseAdapter/Category (1.0.2)
-  - DWBaseAdapter/Config (1.0.2)
-  - DWBaseAdapter/Diff (1.0.2)
-  - DWBaseAdapter/Handler (1.0.2)
-  - DWBaseAdapter/Model (1.0.2)
-  - DWBaseAdapter/Protocol (1.0.2)
-  - DWBaseAdapter/ThreadSafety (1.0.2)
+  - DWBaseAdapter (1.0.3):
+    - DWBaseAdapter/Category (= 1.0.3)
+    - DWBaseAdapter/Config (= 1.0.3)
+    - DWBaseAdapter/Diff (= 1.0.3)
+    - DWBaseAdapter/Handler (= 1.0.3)
+    - DWBaseAdapter/Model (= 1.0.3)
+    - DWBaseAdapter/Protocol (= 1.0.3)
+    - DWBaseAdapter/ThreadSafety (= 1.0.3)
+  - DWBaseAdapter/Category (1.0.3)
+  - DWBaseAdapter/Config (1.0.3)
+  - DWBaseAdapter/Diff (1.0.3)
+  - DWBaseAdapter/Handler (1.0.3)
+  - DWBaseAdapter/Model (1.0.3)
+  - DWBaseAdapter/Protocol (1.0.3)
+  - DWBaseAdapter/ThreadSafety (1.0.3)
   - FBSnapshotTestCase (2.1.4):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
   - FBSnapshotTestCase/Core (2.1.4)
@@ -36,7 +36,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  DWBaseAdapter: bef661203468d3411307db5e1d909864f1caeb31
+  DWBaseAdapter: d302054a7a025387501e1faea24bce7d971322c8
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   Kiwi: fbeafef0f00e4d8f7dcb3420a4930afe70af77f7
 

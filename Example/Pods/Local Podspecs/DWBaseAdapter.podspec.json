@@ -1,6 +1,6 @@
 {
   "name": "DWBaseAdapter",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "summary": "A short description of DWBaseAdapter.",
   "description": "进行tableView 拆分组件化轻量级框架",
   "homepage": "https://github.com/378804441/DWAdapter",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/378804441/DWAdapter.git",
-    "tag": "1.0.2"
+    "tag": "1.0.3"
   },
   "source_files": "DWBaseAdapter/Classes/*.{h,m}",
   "platforms": {

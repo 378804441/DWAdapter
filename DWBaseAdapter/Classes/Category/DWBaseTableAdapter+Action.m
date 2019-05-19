@@ -34,7 +34,7 @@
                 }
                 
                 // 删除动画
-                self.dataSource = [dataSourceM copy];
+                [self setValue:[dataSourceM copy] forKey:@"dataSource"];
                 [self.tableView beginUpdates];
                 [self.tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationNone];
                 [self.tableView endUpdates];
@@ -66,7 +66,7 @@
                 }
                 
                 // 删除动画
-                self.dataSource = [dataSourceM copy];
+                [self setValue:[dataSourceM copy] forKey:@"dataSource"];
                 [self.tableView beginUpdates];
                 
                 if (isSetDelete) {
@@ -111,7 +111,7 @@
             [dataSourceM removeObjectAtIndex:deleteLocation];
             
             XCSafeInvokeThread(^{
-                self.dataSource = [dataSourceM copy];
+                [self setValue:[dataSourceM copy] forKey:@"dataSource"];
                 [self.tableView beginUpdates];
                 [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
                 [self.tableView endUpdates];
@@ -127,7 +127,7 @@
                 [dataSourceM removeObjectAtIndex:deleteLocation];
                 
                 XCSafeInvokeThread(^{
-                    self.dataSource = [dataSourceM copy];
+                    [self setValue:[dataSourceM copy] forKey:@"dataSource"];
                     [self.tableView beginUpdates];
                     [self.tableView deleteSections:indexSet withRowAnimation:UITableViewRowAnimationLeft];
                     [self.tableView endUpdates];
@@ -146,7 +146,7 @@
             [dataSourceM replaceObjectAtIndex:indexPath.section withObject:tempArr];
             
             XCSafeInvokeThread(^{
-                self.dataSource = [dataSourceM copy];
+                [self setValue:[dataSourceM copy] forKey:@"dataSource"];
                 [self.tableView beginUpdates];
                 [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
                 [self.tableView endUpdates];
@@ -171,5 +171,6 @@
         if (blcok) blcok(rowType);
     }
 }
+
 
 @end

@@ -13,6 +13,8 @@
 
 @interface DWBaseTableAdapter()
 
+@property (nonatomic, strong, readwrite) NSArray  *dataSource;      // 数据源
+
 @property (nonatomic, strong) NSMutableDictionary *heightCache;     //高度缓存
 
 @end
@@ -74,6 +76,11 @@
 //清除高度缓存
 -(void)clearCache{
     [self.heightCache removeAllObjects];
+}
+
+/** 清除dataSource */
+-(void)clearDataSource{
+    self.dataSource = nil;
 }
 
 

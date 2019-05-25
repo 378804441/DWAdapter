@@ -65,5 +65,6 @@
  */
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView adapter:(id)adapter;
 -(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView adapter:(id)adapter;
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView adapter:(id)adapter;
 
 @end

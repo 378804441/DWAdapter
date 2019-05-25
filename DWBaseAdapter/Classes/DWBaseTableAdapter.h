@@ -73,7 +73,7 @@ typedef NS_ENUM(NSInteger, DWBaseTableAdapterRowType){
 -(void)updateAdapterTableView:(UITableView *)tableView;
 
 /** 初始化dataSource */
--(NSArray *)instanceDataSource;
+-(NSArray <DWBaseTableDataSourceModel *>*)instanceDataSource;
 
 /** 获取 指定的dataSource内容 */
 -(id)getDataSourceWithIndexPath:(NSIndexPath *)indexPath type:(DWBaseTableAdapterRowType)type;

@@ -330,7 +330,7 @@
 		2E0E8A856A31AA794DEACC25ABBD9685 /* DWBaseTableDataSourceModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DWBaseTableDataSourceModel.h; path = DWBaseAdapter/Classes/Model/DWBaseTableDataSourceModel.h; sourceTree = "<group>"; };
 		2E20959BCA69567D8B6010F5D63992A0 /* KWCountType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWCountType.h; path = Classes/Core/KWCountType.h; sourceTree = "<group>"; };
 		2EB1DEBAD1DC2BB6EAB9956C2A1B936B /* Pods-DWBaseAdapter_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DWBaseAdapter_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		2F2C3D208795D325820D4CE982D7F6F7 /* DWBaseAdapter.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = DWBaseAdapter.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		2F2C3D208795D325820D4CE982D7F6F7 /* DWBaseAdapter.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = DWBaseAdapter.podspec; sourceTree = "<group>"; tabWidth = 2; };
 		2F51B4C0A5029FDE173A91453A87F23E /* Pods-DWBaseAdapter_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DWBaseAdapter_Example.release.xcconfig"; sourceTree = "<group>"; };
 		2FEF35AD3E82954296019E1EF2ACC026 /* Pods-DWBaseAdapter_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DWBaseAdapter_Example.modulemap"; sourceTree = "<group>"; };
 		3031427A415B9F720A887B848B992C42 /* DWBaseTableAdapter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DWBaseTableAdapter.h; path = DWBaseAdapter/Classes/DWBaseTableAdapter.h; sourceTree = "<group>"; };
@@ -340,7 +340,7 @@
 		35E6BEF7049D8595B21C7459827567D7 /* KWExampleNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWExampleNode.h; path = Classes/Nodes/KWExampleNode.h; sourceTree = "<group>"; };
 		361BAE2B9974E156FC48DF12B5082BF7 /* NSObject+KiwiStubAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+KiwiStubAdditions.m"; path = "Classes/Stubbing/NSObject+KiwiStubAdditions.m"; sourceTree = "<group>"; };
 		366060D65FCC6E057992403D87EF52FB /* KWNilMatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWNilMatcher.h; path = Classes/Matchers/KWNilMatcher.h; sourceTree = "<group>"; };
-		3717A1EF0D7CB26BBDBBEC30BF5799A6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		3717A1EF0D7CB26BBDBBEC30BF5799A6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		392CC808F96D09417837DBF7CCB10CB0 /* KWValue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KWValue.m; path = Classes/Core/KWValue.m; sourceTree = "<group>"; };
 		3C7FB9770C8B59F301A37EA328EAF051 /* GDiffCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDiffCore.h; path = DWBaseAdapter/Classes/Diff/GDiffCore.h; sourceTree = "<group>"; };
 		3D0908F9B04FEA2041E6791C1A6A2D39 /* KWFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KWFormatter.m; path = Classes/Core/KWFormatter.m; sourceTree = "<group>"; };
@@ -460,18 +460,18 @@
 		949DC0F46DB93E0C0B55CDAA95C01F9B /* KWBeSubclassOfClassMatcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KWBeSubclassOfClassMatcher.m; path = Classes/Matchers/KWBeSubclassOfClassMatcher.m; sourceTree = "<group>"; };
 		96EFF5191432CAFEDF4845BCAC312C5A /* KWSpec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWSpec.h; path = Classes/Core/KWSpec.h; sourceTree = "<group>"; };
 		96F6B9F8D907026335652727CA23CC87 /* DWBaseTableDataSourceModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DWBaseTableDataSourceModel.m; path = DWBaseAdapter/Classes/Model/DWBaseTableDataSourceModel.m; sourceTree = "<group>"; };
-		975C76C0E2EECEDE5F67E0E088790967 /* DWBaseAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DWBaseAdapter.framework; path = DWBaseAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		975C76C0E2EECEDE5F67E0E088790967 /* DWBaseAdapter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DWBaseAdapter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97CB95DCF16C1C9B34AF122F1E10F964 /* KWRegisterMatchersNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWRegisterMatchersNode.h; path = Classes/Nodes/KWRegisterMatchersNode.h; sourceTree = "<group>"; };
-		996F3AD868621E82DADD654CD11D92E7 /* Kiwi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Kiwi.framework; path = Kiwi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		996F3AD868621E82DADD654CD11D92E7 /* Kiwi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kiwi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A0AD0E3D314E27D601E1E18C507D3C3 /* KWObjCUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KWObjCUtilities.m; path = Classes/Core/KWObjCUtilities.m; sourceTree = "<group>"; };
 		9AC34EE92D4853AE203B774207C45784 /* KWInequalityMatcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KWInequalityMatcher.m; path = Classes/Matchers/KWInequalityMatcher.m; sourceTree = "<group>"; };
 		9B332723722A87CCF3702389CAA09C9F /* NSObject+KiwiMockAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+KiwiMockAdditions.m"; path = "Classes/Mocking/NSObject+KiwiMockAdditions.m"; sourceTree = "<group>"; };
 		9BC8A410B2D242034CFFE7FD69B9F902 /* NSMethodSignature+KiwiAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMethodSignature+KiwiAdditions.m"; path = "Classes/Core/NSMethodSignature+KiwiAdditions.m"; sourceTree = "<group>"; };
 		9D6B1E321D270AEDF840E147C63C0F12 /* DWBaseAdapter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DWBaseAdapter.modulemap; sourceTree = "<group>"; };
 		9D74F835103BEFA9910F09843DBF5EEF /* FBSnapshotTestCase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-umbrella.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EE89394C5FB72264D71F8A5369316A3 /* KWMatcherFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWMatcherFactory.h; path = Classes/Core/KWMatcherFactory.h; sourceTree = "<group>"; };
-		9F470C94900ACB15E6A438164F8304B1 /* Pods_DWBaseAdapter_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DWBaseAdapter_Tests.framework; path = "Pods-DWBaseAdapter_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F470C94900ACB15E6A438164F8304B1 /* Pods_DWBaseAdapter_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DWBaseAdapter_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FA33FED0A370B9666BD8D3311727E39 /* KWVerifying.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWVerifying.h; path = Classes/Verifiers/KWVerifying.h; sourceTree = "<group>"; };
 		A030938CF5C20D74B62F6A5C22FE95B3 /* DWBaseAdapter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DWBaseAdapter-dummy.m"; sourceTree = "<group>"; };
 		A2BFB77C8C61C8061D7DF6FA6E727F6F /* NSObject+KiwiVerifierAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+KiwiVerifierAdditions.h"; path = "Classes/Core/NSObject+KiwiVerifierAdditions.h"; sourceTree = "<group>"; };
@@ -517,7 +517,7 @@
 		C9B4DE630F90EFCF285C91163AB829FA /* KWGenericMatchingAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWGenericMatchingAdditions.h; path = Classes/Matchers/KWGenericMatchingAdditions.h; sourceTree = "<group>"; };
 		C9DECDE78D695B60E069EDE3DD301B97 /* KWContainMatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWContainMatcher.h; path = Classes/Matchers/KWContainMatcher.h; sourceTree = "<group>"; };
 		CA2364B00D28AFEEA19938C02675F7E5 /* KWDeviceInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KWDeviceInfo.m; path = Classes/Core/KWDeviceInfo.m; sourceTree = "<group>"; };
-		CA3B3AC5FAD924824631FEB3026386F8 /* Pods_DWBaseAdapter_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DWBaseAdapter_Example.framework; path = "Pods-DWBaseAdapter_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA3B3AC5FAD924824631FEB3026386F8 /* Pods_DWBaseAdapter_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DWBaseAdapter_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAA8E7925B52CE72EF2286CCEC8782B4 /* KWUserDefinedMatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWUserDefinedMatcher.h; path = Classes/Matchers/KWUserDefinedMatcher.h; sourceTree = "<group>"; };
 		CB0FFB4CE7A0D826F1712A1AD9C1025D /* XCThreadSafeArray.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XCThreadSafeArray.h; path = DWBaseAdapter/Classes/ThreadSafety/XCThreadSafeArray.h; sourceTree = "<group>"; };
 		CC75D4C8B56CE357E2BBC00EA14D9242 /* NSValue+KiwiAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSValue+KiwiAdditions.h"; path = "Classes/Core/NSValue+KiwiAdditions.h"; sourceTree = "<group>"; };
@@ -551,7 +551,7 @@
 		E90A7D6364BEE2D7D7B6CF78DC5CF1C6 /* DWBaseCellProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DWBaseCellProtocol.h; path = DWBaseAdapter/Classes/Protocol/DWBaseCellProtocol.h; sourceTree = "<group>"; };
 		EB1DDEE22CEAEE950A97FE08A8233D61 /* KWContainMatcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KWContainMatcher.m; path = Classes/Matchers/KWContainMatcher.m; sourceTree = "<group>"; };
 		EC331B9673C6EB97176924AE0862EEA2 /* XCThreadSafeArray.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XCThreadSafeArray.m; path = DWBaseAdapter/Classes/ThreadSafety/XCThreadSafeArray.m; sourceTree = "<group>"; };
-		ECF14BCAC30F39A5338AA30510CDA6B9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		ECF14BCAC30F39A5338AA30510CDA6B9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		EE163E2B62465541714877C7392DE4AC /* KWSymbolicator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KWSymbolicator.m; path = Classes/Core/KWSymbolicator.m; sourceTree = "<group>"; };
 		EEB0A9BEBDAC3F7009E218380D19459A /* KWInvocationCapturer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWInvocationCapturer.h; path = Classes/Core/KWInvocationCapturer.h; sourceTree = "<group>"; };
 		F14592024216C0787D399A9C55CF47AE /* KWBeEmptyMatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWBeEmptyMatcher.h; path = Classes/Matchers/KWBeEmptyMatcher.h; sourceTree = "<group>"; };
@@ -563,7 +563,7 @@
 		F7CC9081EACB1C3B89A927957FDD6531 /* KWFailure.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KWFailure.m; path = Classes/Core/KWFailure.m; sourceTree = "<group>"; };
 		F944C8F99F7742929C6DA55F4A539DAD /* NSProxy+KiwiVerifierAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSProxy+KiwiVerifierAdditions.m"; path = "Classes/Core/NSProxy+KiwiVerifierAdditions.m"; sourceTree = "<group>"; };
 		FC9DBF5228B1745AB86E155E6D05C992 /* KWBeZeroMatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWBeZeroMatcher.h; path = Classes/Matchers/KWBeZeroMatcher.h; sourceTree = "<group>"; };
-		FCB550FEA2A458F5E47E6D73E730BE39 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FBSnapshotTestCase.framework; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCB550FEA2A458F5E47E6D73E730BE39 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD115E508BED16212E2CCFF799C9045A /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -721,7 +721,6 @@
 				BE2D686217FFA06A86379BF2C9E58B39 /* Support Files */,
 				0752E4EE5A73BE0651E794BE11413270 /* SwiftSupport */,
 			);
-			name = FBSnapshotTestCase;
 			path = FBSnapshotTestCase;
 			sourceTree = "<group>";
 		};
@@ -982,7 +981,6 @@
 				27CC5CF1F30F535265F587EE9462AEDA /* NSValue+KiwiAdditions.m */,
 				BA6C0CA999BFF90827046B8D4AD8E65C /* Support Files */,
 			);
-			name = Kiwi;
 			path = Kiwi;
 			sourceTree = "<group>";
 		};
@@ -1785,8 +1783,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

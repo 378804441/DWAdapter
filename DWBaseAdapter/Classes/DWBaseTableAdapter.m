@@ -53,7 +53,7 @@
     return _dataSource;
 }
 
--(NSArray *)instanceDataSource{
+-(NSArray <DWBaseTableDataSourceModel *>*)instanceDataSource{
     NSMutableArray *array = [NSMutableArray array];
     return [array copy];
 }

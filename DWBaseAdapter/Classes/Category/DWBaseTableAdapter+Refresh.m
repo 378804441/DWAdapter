@@ -13,59 +13,56 @@
 
 /**
  刷新tableView协议
+ @param clearCache : 清除缓存
  */
--(void)reloadTableView{
+-(void)reloadTableViewWithClearCache:(BOOL)clearCache{
     NSParameterAssert(self.tableView);
-    [self reloadTableViewWithIndexSet:nil indexPath:nil];
-}
-
-/**
- 刷新tableView协议 - 刷新, 清除高度缓存
- */
--(void)reloadTableViewClearCache{
-    NSParameterAssert(self.tableView);
-    [self clearCache];
-    [self reloadTableViewWithIndexSet:nil indexPath:nil];
+    [self reloadTableViewWithIndexSet:nil indexPath:nil clearCache:clearCache];
 }
 
 
 /**
  刷新tableView协议
  @param cell      刷新cell对象
+ @param clearCache : 清除缓存
  */
--(void)reloadTableViewWithCell:(UITableViewCell *)cell{
+-(void)reloadTableViewWithCell:(UITableViewCell *)cell clearCache:(BOOL)clearCache{
     NSParameterAssert(self.tableView);
     if (IsNull(cell)) return;
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-    [self reloadTableViewWithIndexSet:nil indexPath:indexPath];
+    [self reloadTableViewWithIndexSet:nil indexPath:indexPath clearCache:clearCache];
 }
 
 /**
  刷新tableView协议
  @param indexSet  刷新section
+ @param clearCache : 清除缓存
  */
--(void)reloadTableViewWithIndexSet:(NSIndexSet *)indexSet{
+-(void)reloadTableViewWithIndexSet:(NSIndexSet *)indexSet clearCache:(BOOL)clearCache{
     NSParameterAssert(self.tableView);
-    [self reloadTableViewWithIndexSet:indexSet indexPath:nil];
+    [self reloadTableViewWithIndexSet:indexSet indexPath:nil clearCache:clearCache];
 }
 
 /**
  刷新tableView协议
  @param indexPath 刷新row
+ @param clearCache : 清除缓存
  */
--(void)reloadTableViewWithIndexPath:(NSIndexPath *)indexPath{
+-(void)reloadTableViewWithIndexPath:(NSIndexPath *)indexPath clearCache:(BOOL)clearCache{
     NSParameterAssert(self.tableView);
-    [self reloadTableViewWithIndexSet:nil indexPath:indexPath];
+    [self reloadTableViewWithIndexSet:nil indexPath:indexPath clearCache:clearCache];
 }
 
 /**
  刷新tableView协议
  @param indexSet  刷新section
  @param indexPath 刷新row
+ @param clearCache : 清除缓存
  */
--(void)reloadTableViewWithIndexSet:(NSIndexSet *__nullable)indexSet indexPath:(NSIndexPath * __nullable)indexPath{
+-(void)reloadTableViewWithIndexSet:(NSIndexSet *__nullable)indexSet indexPath:(NSIndexPath * __nullable)indexPath clearCache:(BOOL)clearCache{
     NSParameterAssert(self.tableView);
     [self clearDataSource];
+    if (clearCache) [self clearCache];
     if (indexSet) {
         [self.tableView reloadSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];
     }else if(indexPath){

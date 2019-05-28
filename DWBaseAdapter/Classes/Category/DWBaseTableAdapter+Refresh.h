@@ -18,33 +18,28 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  刷新tableView协议 - 只刷新内容 不清除高度缓存
  */
--(void)reloadTableView;
-
-/**
- 刷新tableView协议 - 刷新, 清除高度缓存
- */
--(void)reloadTableViewClearCache;
+-(void)reloadTableViewWithClearCache:(BOOL)clearCache;
 
 
 /**
  刷新tableView协议
  @param cell      刷新cell对象
  */
--(void)reloadTableViewWithCell:(UITableViewCell *)cell;
+-(void)reloadTableViewWithCell:(UITableViewCell *)cell clearCache:(BOOL)clearCache;
 
 
 /**
  刷新tableView协议
  @param indexSet  刷新section
  */
--(void)reloadTableViewWithIndexSet:(NSIndexSet *)indexSet;
+-(void)reloadTableViewWithIndexSet:(NSIndexSet *)indexSet clearCache:(BOOL)clearCache;
 
 
 /**
  刷新tableView协议
  @param indexPath 刷新row
  */
--(void)reloadTableViewWithIndexPath:(NSIndexPath *)indexPath;
+-(void)reloadTableViewWithIndexPath:(NSIndexPath *)indexPath clearCache:(BOOL)clearCache;
 
 
 /**
@@ -52,7 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param indexSet  刷新section
  @param indexPath 刷新row
  */
--(void)reloadTableViewWithIndexSet:(NSIndexSet *__nullable)indexSet indexPath:(NSIndexPath * __nullable)indexPath;
+-(void)reloadTableViewWithIndexSet:(NSIndexSet *__nullable)indexSet indexPath:(NSIndexPath * __nullable)indexPath clearCache:(BOOL)clearCache;
 
 @end
 

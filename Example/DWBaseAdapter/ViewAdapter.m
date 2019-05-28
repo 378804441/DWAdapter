@@ -80,7 +80,7 @@ typedef NS_ENUM(NSInteger, ViewAdapterType){
 -(void)cell4_clickDelegate{
     NSLog(@"点击了 cell4");
     self.testKey = @"更改数据源";
-    [self reloadTableView];
+    [self reloadTableViewWithClearCache:NO];
     return;
     
     
@@ -92,7 +92,7 @@ typedef NS_ENUM(NSInteger, ViewAdapterType){
     cellModel.height =  30;
     dataModel.data = cellModel;
     
-    [self reloadTableView];
+    [self reloadTableViewWithClearCache:NO];
     
 //    self.diffDataSource = [dataSourceM copy];
     

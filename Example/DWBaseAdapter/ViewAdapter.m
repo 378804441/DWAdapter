@@ -79,24 +79,6 @@ typedef NS_ENUM(NSInteger, ViewAdapterType){
 
 -(void)cell4_clickDelegate{
     NSLog(@"点击了 cell4");
-    self.testKey = @"更改数据源";
-    [self reloadTableViewWithClearCache:NO];
-    return;
-    
-    
-    NSInteger selectIntger = 1;
-    NSMutableArray <DWBaseTableDataSourceModel *>*dataSourceM = [NSMutableArray arrayWithArray:self.dataSource];
-    DWBaseTableDataSourceModel *dataModel = [dataSourceM objectAtIndex:selectIntger];
-    CellModel2 *cellModel = dataModel.data;
-    cellModel.title  = @"6666666";
-    cellModel.height =  30;
-    dataModel.data = cellModel;
-    
-    [self reloadTableViewWithClearCache:NO];
-    
-//    self.diffDataSource = [dataSourceM copy];
-    
-//    [self reloadAdapter];
 }
 
 

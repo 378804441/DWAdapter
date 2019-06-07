@@ -7,23 +7,15 @@
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+项目写着写着会，控制器层会越来越臃肿。
+项目里99%的场景基础打底控件都可以通过tableView 来解决。
+该框架就是 将控制器里的tableView dataSource 拆分出独立模块， 通过数据源驱动方式来进行模块化编程。
+框架支持Cell高度的缓存, 面向协议做的tableView delegate 拆分等公共能, 可以让使用者专注于数据源的更改。
 
-## Requirements
 
-## Installation
-
-DWBaseAdapter is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+## pod集成
 
 ```ruby
-pod 'DWBaseAdapter'
+pod 'DWBaseAdapter', :git => "https://github.com/378804441/DWAdapter.git"
 ```
 
-## Author
-
-378804441@qq.com, dingwei2014@xiaochuankeji.cn
-
-## License
-
-DWBaseAdapter is available under the MIT license. See the LICENSE file for more info.

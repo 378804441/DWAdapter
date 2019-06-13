@@ -18,8 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 @optional   /***  可以不实现方法 ***/
 
 /** handle层统一外吐网络访问成功后数据 */
--(void)networkAccessWithSuccess:(void (^)(NSDictionary *data))success
-                           fail:(void (^)(NSString *error))fail;
+-(void)networkAccessWithSuccess:(void (^__nullable)(NSDictionary *data))success
+                           fail:(void (^__nullable)(NSString *error))fail;
 
 @end
 

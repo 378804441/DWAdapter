@@ -17,8 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @optional   /***  可以不实现方法 ***/
 
-/** 绑定handler */
-- (void)configHandler:(id)handler;
+/** handle层统一外吐网络访问成功后数据 */
+-(void)networkAccessWithSuccess:(void (^)(NSDictionary *data))success
+                           fail:(void (^)(NSString *error))fail;
 
 @end
 

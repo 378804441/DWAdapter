@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DWBaseHandlerProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DWBaseHandler : NSObject
+@interface DWBaseHandler : NSObject<DWBaseHandlerProtocol>
 
 #pragma mark - public method
 
@@ -20,7 +21,6 @@ NS_ASSUME_NONNULL_BEGIN
 /** 初始化handler --- adapter专用*/
 - (instancetype)initWithAdapter:(id __nullable)adapter;
 
-
 /** 删除绑定在该 handler上的 observer */
 - (void)removeObservers;
 
@@ -28,10 +28,10 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - public property
 
 /** 控制器里的处理事件 */
-@property (nonatomic, weak) id controler;
+@property (nonatomic, weak, readonly) id controler;
 
 /** 适配器里面的处理事件 */
-@property (nonatomic, weak) id adapter;
+@property (nonatomic, weak, readonly) id adapter;
 
 @end
 

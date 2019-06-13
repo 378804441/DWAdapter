@@ -8,6 +8,14 @@
 
 #import "DWBaseHandler.h"
 
+@interface DWBaseHandler()
+
+@property (nonatomic, weak, readwrite) id controler;
+
+@property (nonatomic, weak, readwrite) id adapter;
+
+@end
+
 @implementation DWBaseHandler
 
 - (instancetype)initWithController:(id __nullable)controller adapter:(id __nullable)adapter{

@@ -17,9 +17,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 @optional   /***  可以不实现方法 ***/
 
+/** UIViewcontrol 一些生命周期方法 */
+- (void)viewWillDisappear;
+
+- (void)viewDidDisappear;
+
+- (void)viewWillAppear;
+
+- (void)viewDidAppear;
+
+
 /** handle层统一外吐网络访问成功后数据 */
 - (void)networkAccessWithSuccess:(void (^__nullable)(NSDictionary *data))success
                            fail:(void (^__nullable)(NSString *error))fail;
+
 
 /** 对handle进行绑定数据 */
 - (void)bindData:(id)data;

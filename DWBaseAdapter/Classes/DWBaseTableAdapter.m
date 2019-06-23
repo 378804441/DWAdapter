@@ -224,8 +224,8 @@
 #pragma mark - all action
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if ([self.tableProtocolDelegate respondsToSelector:@selector(didSelectTableView:indexPath:adapter:)]) {
-        [self.tableProtocolDelegate didSelectTableView:tableView indexPath:indexPath adapter:self];
+    if ([self.tableProtocolDelegate respondsToSelector:@selector(didSelectTableView:indexPath:data:adapter:)]) {
+        [self.tableProtocolDelegate didSelectTableView:tableView indexPath:indexPath data:nil adapter:self];
     }
 }
 

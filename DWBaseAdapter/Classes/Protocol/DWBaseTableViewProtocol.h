@@ -16,7 +16,7 @@
 
 
 /** 点击协议 */
--(void)didSelectTableView:(UITableView *)tabView indexPath:(NSIndexPath *)indexPath adapter:(id)adapter;
+-(void)didSelectTableView:(UITableView *)tabView indexPath:(NSIndexPath *)indexPath data:(id)data adapter:(id)adapter;
 
 
 /**
@@ -25,7 +25,7 @@
  @param indexPath 刷新cell
  @param adapter   适配器
  */
--(void)reloadTableViewWithIndexSet:(NSIndexSet *)indexSet indexPath:(NSIndexPath *)indexPath adapter:(id)adapter;
+-(void)reloadTableViewWithIndexSet:(NSIndexSet *)indexSet indexPath:(NSIndexPath *)indexPath data:(id)data adapter:(id)adapter;
 
 
 /**
@@ -33,7 +33,7 @@
  @param vc      跳转的VC
  @param adapter 适配器
  */
--(void)pushViewController:(UIViewController *)vc adapter:(id)adapter;
+-(void)pushViewController:(UIViewController *)vc data:(id)data adapter:(id)adapter;
 
 
 /**

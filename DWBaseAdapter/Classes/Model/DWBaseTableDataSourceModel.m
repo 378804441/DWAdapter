@@ -13,16 +13,31 @@
 @synthesize index   = _index;
 
 
-+ (instancetype)initWithTag:(NSInteger)tag data:(id __nullable)data cell:(id __nullable)cell{
-    return [[self alloc] initWithTag:tag data:data cell:cell delegate:nil];
-}
-
 /** 初始化model */
-+ (instancetype)initWithTag:(NSInteger)tag data:(id __nullable)data cell:(id __nullable)cell delegate:(id)delegate{
-    return [[self alloc] initWithTag:tag data:data cell:cell delegate:delegate];
++ (instancetype)initWithTag:(NSInteger)tag data:(id __nullable)data cell:(id __nullable)cell{
+    return [[self alloc] initWithTag:tag data:data cell:cell delegate:nil respons:nil];
 }
 
-- (instancetype)initWithTag:(NSInteger)tag data:(id __nullable)data cell:(id __nullable)cell delegate:(id)delegate{
+
+/** 初始化model (带有代理的)*/
++ (instancetype)initWithTag:(NSInteger)tag data:(id __nullable)data cell:(id __nullable)cell delegate:(id)delegate{
+    return [[self alloc] initWithTag:tag data:data cell:cell delegate:delegate respons:nil];
+}
+
+
+/** 初始化model (带有责任链的) */
++ (instancetype)initWithTag:(NSInteger)tag data:(id __nullable)data cell:(id __nullable)cell respons:(NSArray *)respons{
+    return [[self alloc] initWithTag:tag data:data cell:cell delegate:nil respons:respons];
+}
+
+
+/** 初始化model (带有责任链+代理的) */
++ (instancetype)initWithTag:(NSInteger)tag data:(id __nullable)data cell:(id __nullable)cell delegate:(id)delegate respons:(NSArray *)respons{
+    return [[self alloc] initWithTag:tag data:data cell:cell delegate:delegate respons:respons];
+}
+
+
+- (instancetype)initWithTag:(NSInteger)tag data:(id __nullable)data cell:(id __nullable)cell delegate:(id)delegate respons:(NSArray *)respons{
     self = [super init];
     if (self) {
         self.tag  = tag;
@@ -31,6 +46,9 @@
         }
         if (cell) {
             self.cell = cell;
+        }
+        if (respons) {
+            self.responsArray = respons;
         }
         self.myDelegate = delegate;
         _modelHash = [NSString stringWithFormat:@"%lu", (unsigned long)[self hash]];

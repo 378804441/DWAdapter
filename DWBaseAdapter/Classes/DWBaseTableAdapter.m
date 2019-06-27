@@ -182,7 +182,27 @@
              errorStr);
     
     // 初始化Cell 实例对象
-    id cell = [protocolCell cellWithTableView:tableView];
+    id <DWBaseCellProtocol>cell = [protocolCell cellWithTableView:tableView];
+    
+    // 响应式cell间数据传递
+    WS(weakSelf);
+    cell.sendDataBlock = ^(id  _Nonnull sendData, NSIndexPath * _Nonnull indexPath) {
+        SS(strongSelf);
+        DWBaseTableDataSourceModel *model = [strongSelf getDataSourceWithIndexPath:indexPath type:DWBaseTableAdapterRowType_rowModel];
+        if (!IsNull(model.responsArray)) {
+            
+#warning on(2) 复杂度 需要优化
+            for (DWBaseTableDataSourceModel *cellModel in self.dataSource) {
+                for (NSNumber *type in model.responsArray) {
+                    id <DWBaseCellProtocol>cell = [protocolCell cellWithTableView:tableView];
+                    if (cellModel.tag == [type integerValue] && [cell respondsToSelector:@selector(injectionData:)]) {
+                        [cell injectionData:sendData];
+                    }
+                }
+            }
+        }
+        
+    };
     
     // 实例对象不存在直接返回一个安全Cell
     if (!cell) return [self createSecurityTableView:tableView cellForRowAtIndexPath:indexPath cellName:NSStringFromClass(cell)];

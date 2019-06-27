@@ -15,6 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, weak) id myDelegate;
 
+
+#pragma mark - 基础服务协议
+
 /** 初始化 */
 + (instancetype)cellWithTableView:(UITableView *)tableView;
 
@@ -26,6 +29,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** 绑定数据源 */
 - (void)bindWithCellModel:(id)cellModel indexPath:(NSIndexPath *)indexPath;
+
+
+#pragma mark - cell间数据传导协议
+
+/** 响应数据改变block */
+@property (nonatomic, copy) void (^sendDataBlock)(id sendData, NSIndexPath *indexPath);
+
+/** 注入数据 */
+- (void)injectionData:(id)data;
 
 @end
 

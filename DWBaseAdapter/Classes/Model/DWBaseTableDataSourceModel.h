@@ -28,6 +28,9 @@ NS_ASSUME_NONNULL_BEGIN
 /** delegate */
 @property (nonatomic, weak)   id myDelegate;
 
+/** 责任链(存储着要对哪个关联cell负责的 tag, 会依次响应) */
+@property (nonatomic, strong) NSArray *responsArray;
+
 /** 哈希地址 */
 @property (nonatomic, strong, readonly) NSString *modelHash;
 
@@ -38,8 +41,15 @@ NS_ASSUME_NONNULL_BEGIN
 /** 初始化model */
 + (instancetype)initWithTag:(NSInteger)tag data:(id __nullable)data cell:(id __nullable)cell;
 
-/** 初始化model */
+/** 初始化model (带有代理方法的) */
 + (instancetype)initWithTag:(NSInteger)tag data:(id __nullable)data cell:(id __nullable)cell delegate:(id)delegate;
+
+/** 初始化model (带有责任链的) */
++ (instancetype)initWithTag:(NSInteger)tag data:(id __nullable)data cell:(id __nullable)cell respons:(NSArray *)respons;
+
+/** 初始化model (带有责任链+代理的) */
++ (instancetype)initWithTag:(NSInteger)tag data:(id __nullable)data cell:(id __nullable)cell delegate:(id)delegate respons:(NSArray *)respons;
+
 
 
 #pragma mark - diff Protocol

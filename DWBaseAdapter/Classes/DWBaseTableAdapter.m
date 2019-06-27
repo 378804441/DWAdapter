@@ -221,6 +221,7 @@
 }
 
 
+
 #pragma mark - all action
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -230,13 +231,16 @@
 }
 
 
-#pragma mark - 解析每行DataSource
 
+#pragma mark - dataSource method
+
+/** 获取 指定的dataSource内容 */
 -(id)getDataSourceWithIndexPath:(NSIndexPath *)indexPath type:(DWBaseTableAdapterRowType)type{
     if([self checkRowType] == DWBaseTableAdapterRow_noGrop)    return [self noGroupRowTypeFromArray:self.dataSource indexPath:indexPath type:type];
     else if([self checkRowType] == DWBaseTableAdapterRow_grop) return [self rowTypeFromArray:self.dataSource indexPath:indexPath type:type];
     return nil; //数据源没有数据
 }
+
 
 //解析tableView 每组的 枚举类型
 - (id)rowTypeFromArray:(NSArray *)sourceArray indexPath:(NSIndexPath *)indexPath type:(DWBaseTableAdapterRowType)type{
@@ -245,12 +249,14 @@
     return [self parsingDataSourceWithModel:dataSourceModel type:type];
 }
 
+
 //解析不是分组情况下
 - (id)noGroupRowTypeFromArray:(NSArray *)sourceArray indexPath:(NSIndexPath *)indexPath type:(DWBaseTableAdapterRowType)type{
     NSParameterAssert(indexPath && sourceArray.count > 0 && sourceArray[indexPath.row] && indexPath.section == 0);
     DWBaseTableDataSourceModel *dataSourceModel = sourceArray[indexPath.row];
     return [self parsingDataSourceWithModel:dataSourceModel type:type];
 }
+
 
 - (id)parsingDataSourceWithModel:(DWBaseTableDataSourceModel *)dataSourceModel type:(DWBaseTableAdapterRowType)type{
     switch (type) {
@@ -274,7 +280,41 @@
             break;
     }
 }
-/****************** 获取 rowType END *******************/
+
+
+/** 删除相应数据源 */
+- (void)removeDataSource:(NSIndexPath *)indexPath indexSet:(NSIndexSet *)indexSet{
+    
+    NSParameterAssert(indexPath || indexSet);
+    
+    NSMutableArray *tempArray = [self.dataSource mutableCopy];
+    
+    if([self checkRowType] == DWBaseTableAdapterRow_grop){
+        NSParameterAssert(tempArray.count > 0 && tempArray[indexSet.firstIndex]);
+        NSParameterAssert(tempArray.count > 0 && tempArray[indexPath.section] && tempArray[indexPath.section][indexPath.row]);
+        
+        if (!IsNull(indexSet)) {
+            [tempArray removeObjectsAtIndexes:indexSet];
+            return;
+        }
+        
+        if (!IsNull(indexPath)) {
+            [tempArray[indexPath.section] removeObjectAtIndex:indexPath.row];
+        }
+        
+    }else if([self checkRowType] == DWBaseTableAdapterRow_noGrop){
+        NSParameterAssert(indexPath && tempArray.count > 0 && tempArray[indexPath.row] && indexPath.section == 0);
+        [tempArray removeObjectAtIndex:indexPath.row];
+    }
+    
+}
+
+
+/** 替换相应数据源 */
+- (void)replaceDataSource:(NSIndexPath *)indexPath indexSet:(NSIndexSet *)indexSet{
+    
+}
+
 
 
 #pragma mark - private method

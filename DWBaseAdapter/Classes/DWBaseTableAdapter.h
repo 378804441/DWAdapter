@@ -75,9 +75,6 @@ typedef NS_ENUM(NSInteger, DWBaseTableAdapterRowType){
 /** 初始化dataSource */
 -(NSArray <DWBaseTableDataSourceModel *>*)instanceDataSource;
 
-/** 获取 指定的dataSource内容 */
--(id)getDataSourceWithIndexPath:(NSIndexPath *)indexPath type:(DWBaseTableAdapterRowType)type;
-
 /** 检测tableView类型 */
 -(DWBaseTableAdapterRowEnum)checkRowType;
 
@@ -89,5 +86,18 @@ typedef NS_ENUM(NSInteger, DWBaseTableAdapterRowType){
 
 /** 清除高度缓存 */
 -(void)clearCache;
+
+
+#pragma mark - dataSource method
+
+/** 获取 指定的dataSource内容 */
+-(id)getDataSourceWithIndexPath:(NSIndexPath *)indexPath type:(DWBaseTableAdapterRowType)type;
+
+/** 删除相应数据源 */
+- (void)removeDataSource:(NSIndexPath *)indexPath indexSet:(NSIndexSet *)indexSet;
+
+/** 替换相应数据源 */
+- (void)replaceDataSource:(NSIndexPath *)indexPath indexSet:(NSIndexSet *)indexSet;
+
 
 @end

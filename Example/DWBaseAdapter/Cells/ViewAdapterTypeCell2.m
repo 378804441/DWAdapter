@@ -10,6 +10,7 @@
 #import "CellModel2.h"
 
 @implementation ViewAdapterTypeCell2
+@synthesize sendDataBlock = _sendDataBlock;
 
 +(instancetype)cellWithTableView:(UITableView *)tableView{
     static NSString *ID = @"ViewAdapterTypeCell2";

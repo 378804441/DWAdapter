@@ -134,16 +134,16 @@
 		3539D7D4227FBF0200D36866 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				3539D7D5227FBF0200D36866 /* ViewAdapterTypeCell4.m */,
-				3539D7D6227FBF0200D36866 /* ViewAdapterTypeCell2.h */,
 				3539D7D7227FBF0200D36866 /* ViewAdapterTypeCell1.h */,
-				3539D7D8227FBF0200D36866 /* ViewAdapterTypeCell3.m */,
-				3539D7D9227FBF0200D36866 /* ViewAdapterTypeCell5.h */,
-				3539D7DA227FBF0200D36866 /* ViewAdapterTypeCell2.m */,
-				3539D7DB227FBF0200D36866 /* ViewAdapterTypeCell4.h */,
-				3539D7DC227FBF0200D36866 /* ViewAdapterTypeCell5.m */,
-				3539D7DD227FBF0200D36866 /* ViewAdapterTypeCell3.h */,
 				3539D7DE227FBF0200D36866 /* ViewAdapterTypeCell1.m */,
+				3539D7D6227FBF0200D36866 /* ViewAdapterTypeCell2.h */,
+				3539D7DA227FBF0200D36866 /* ViewAdapterTypeCell2.m */,
+				3539D7DD227FBF0200D36866 /* ViewAdapterTypeCell3.h */,
+				3539D7D8227FBF0200D36866 /* ViewAdapterTypeCell3.m */,
+				3539D7DB227FBF0200D36866 /* ViewAdapterTypeCell4.h */,
+				3539D7D5227FBF0200D36866 /* ViewAdapterTypeCell4.m */,
+				3539D7D9227FBF0200D36866 /* ViewAdapterTypeCell5.h */,
+				3539D7DC227FBF0200D36866 /* ViewAdapterTypeCell5.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";

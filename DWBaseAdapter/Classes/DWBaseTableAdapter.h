@@ -96,8 +96,12 @@ typedef NS_ENUM(NSInteger, DWBaseTableAdapterRowType){
 /** 删除相应数据源 */
 - (void)removeDataSource:(NSIndexPath *)indexPath indexSet:(NSIndexSet *)indexSet;
 
-/** 替换相应数据源 */
-- (void)replaceDataSource:(NSIndexPath *)indexPath indexSet:(NSIndexSet *)indexSet;
+/**
+ 替换相应数据源
+ 如果传进来的是 indexSet  (整条session替换), newModel 就一定要是 存有 DWBaseTableDataSourceModel 类型的 数组
+ 如果传进来的是 indexPath newModel 需要是 DWBaseTableDataSourceModel 对象
+ */
+- (void)replaceDataSource:(NSIndexPath *__nullable)indexPath indexSet:(NSIndexSet *__nullable)indexSet newModel:(id)newModel;
 
 
 @end

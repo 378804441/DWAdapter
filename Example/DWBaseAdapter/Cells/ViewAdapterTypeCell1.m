@@ -9,7 +9,7 @@
 #import "ViewAdapterTypeCell1.h"
 
 @implementation ViewAdapterTypeCell1
-
+@synthesize sendDataBlock = _sendDataBlock;
 
 +(instancetype)cellWithTableView:(UITableView *)tableView{
     static NSString *ID = @"ViewAdapterTypeCell1";

@@ -9,6 +9,7 @@
 #import "ViewAdapterTypeCell3.h"
 
 @implementation ViewAdapterTypeCell3
+@synthesize sendDataBlock = _sendDataBlock;
 
 +(instancetype)cellWithTableView:(UITableView *)tableView{
     static NSString *ID = @"ViewAdapterTypeCell3";
@@ -43,5 +44,10 @@
     self.textLabel.text = text;
     self.textLabel.font = [UIFont systemFontOfSize:12];
 }
+
+- (void)injectionData:(id)data{
+    
+}
+
 
 @end

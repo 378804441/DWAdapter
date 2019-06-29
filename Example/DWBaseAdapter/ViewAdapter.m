@@ -63,7 +63,7 @@ typedef NS_ENUM(NSInteger, ViewAdapterType){
     [dataArray addObject:cellModel_3];
     
     
-    DWBaseTableDataSourceModel *cellModel_4 = [DWBaseTableDataSourceModel initWithTag:ViewAdapterType_cell4 data:@{@"text":@"这是个传入cell自定义代理"} cell:[ViewAdapterTypeCell4 class] delegate:self];
+    DWBaseTableDataSourceModel *cellModel_4 = [DWBaseTableDataSourceModel initWithTag:ViewAdapterType_cell4 data:@{@"text":@"这是个传入cell自定义代理"} cell:[ViewAdapterTypeCell4 class] delegate:self respons:@[@(ViewAdapterType_cell3)]];
     [dataArray addObject:cellModel_4];
     
     
@@ -79,6 +79,8 @@ typedef NS_ENUM(NSInteger, ViewAdapterType){
 
 -(void)cell4_clickDelegate{
     NSLog(@"点击了 cell4");
+    
+    
 }
 
 

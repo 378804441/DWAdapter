@@ -184,26 +184,6 @@
     // 初始化Cell 实例对象
     id <DWBaseCellProtocol>cell = [protocolCell cellWithTableView:tableView];
     
-    // 响应式cell间数据传递
-    WS(weakSelf);
-    cell.sendDataBlock = ^(id  _Nonnull sendData, NSIndexPath * _Nonnull indexPath) {
-        SS(strongSelf);
-        DWBaseTableDataSourceModel *model = [strongSelf getDataSourceWithIndexPath:indexPath type:DWBaseTableAdapterRowType_rowModel];
-        if (!IsNull(model.responsArray)) {
-            
-#warning on(2) 复杂度 需要优化
-            for (DWBaseTableDataSourceModel *cellModel in self.dataSource) {
-                for (NSNumber *type in model.responsArray) {
-                    id <DWBaseCellProtocol>cell = [protocolCell cellWithTableView:tableView];
-                    if (cellModel.tag == [type integerValue] && [cell respondsToSelector:@selector(injectionData:)]) {
-                        [cell injectionData:sendData];
-                    }
-                }
-            }
-        }
-        
-    };
-    
     // 实例对象不存在直接返回一个安全Cell
     if (!cell) return [self createSecurityTableView:tableView cellForRowAtIndexPath:indexPath cellName:NSStringFromClass(cell)];
     
@@ -305,7 +285,7 @@
 /** 删除相应数据源 */
 - (void)removeDataSource:(NSIndexPath *)indexPath indexSet:(NSIndexSet *)indexSet{
     
-    NSParameterAssert(indexPath || indexSet);
+    NSParameterAssert(indexPath && indexSet);
     
     NSMutableArray *tempArray = [self.dataSource mutableCopy];
     
@@ -331,8 +311,35 @@
 
 
 /** 替换相应数据源 */
-- (void)replaceDataSource:(NSIndexPath *)indexPath indexSet:(NSIndexSet *)indexSet{
+- (void)replaceDataSource:(NSIndexPath *)indexPath indexSet:(NSIndexSet *)indexSet newModel:(id)newModel{
+    NSParameterAssert(indexPath && indexSet);
+    NSParameterAssert(newModel);
     
+    NSMutableArray *tempArray = [self.dataSource mutableCopy];
+    
+    if([self checkRowType] == DWBaseTableAdapterRow_grop){
+        NSParameterAssert(tempArray.count > 0 && tempArray[indexSet.firstIndex]);
+        NSParameterAssert(tempArray.count > 0 && tempArray[indexPath.section] && tempArray[indexPath.section][indexPath.row]);
+        
+        if (!IsNull(indexSet)) {
+            NSParameterAssert([newModel isKindOfClass:[NSArray class]] || [newModel isKindOfClass:[NSMutableArray class]]);
+            [tempArray replaceObjectAtIndex:indexSet.firstIndex withObject:newModel];
+            return;
+        }
+        
+        if (!IsNull(indexPath)) {
+            NSParameterAssert([newModel isKindOfClass:[DWBaseTableDataSourceModel class]]);
+            [tempArray[indexPath.section] replaceObjectAtIndex:indexPath.row withObject:newModel];
+        }
+        
+    }else if([self checkRowType] == DWBaseTableAdapterRow_noGrop){
+        NSParameterAssert(indexPath && tempArray.count > 0 && tempArray[indexPath.row] && indexPath.section == 0);
+        NSParameterAssert([newModel isKindOfClass:[DWBaseTableDataSourceModel class]]);
+        
+        [tempArray replaceObjectAtIndex:indexPath.row withObject:newModel];
+    }
+    
+    self.dataSource = [tempArray copy];
 }
 
 

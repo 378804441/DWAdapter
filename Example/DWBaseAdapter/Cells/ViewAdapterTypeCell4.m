@@ -8,8 +8,16 @@
 
 #import "ViewAdapterTypeCell4.h"
 
+@interface ViewAdapterTypeCell4()
+
+@property (nonatomic, strong) NSIndexPath *indexpath;
+
+@end
+
+
 @implementation ViewAdapterTypeCell4
 @synthesize myDelegate = _myDelegate;
+@synthesize sendDataBlock = _sendDataBlock;
 
 
 +(instancetype)cellWithTableView:(UITableView *)tableView{
@@ -35,6 +43,7 @@
 #pragma mark - cell protocol
 
 -(void)bindWithCellModel:(id)cellModel indexPath:(NSIndexPath *)indexPath{
+    self.indexpath = indexPath;
     NSDictionary *dataDic = cellModel;
     NSString *text = dataDic[@"text"];
     self.textLabel.text = text;
@@ -48,6 +57,9 @@
 #pragma mark - delegate
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    if (self.sendDataBlock) {
+        self.sendDataBlock(@"111111111111111", self.indexpath);
+    }
     if ([self.myDelegate respondsToSelector:@selector(cell4_clickDelegate)]) {
         [self.myDelegate cell4_clickDelegate];
     }

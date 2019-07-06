@@ -368,7 +368,7 @@
         
         if (!IsNull(indexPath)) {
             NSParameterAssert([newModel isKindOfClass:[DWBaseTableDataSourceModel class]]);
-            if (tempArray[indexPath.section].count > indexPath.row) {
+            if (((NSArray *)tempArray[indexPath.section]).count > indexPath.row) {
                 [tempArray[indexPath.section] insertObject:newModel atIndex:indexPath.row];
             }
         }

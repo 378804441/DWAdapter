@@ -285,7 +285,7 @@
 /** 删除相应数据源 */
 - (void)removeDataSource:(NSIndexPath *)indexPath indexSet:(NSIndexSet *)indexSet{
     
-    NSParameterAssert(indexPath && indexSet);
+    NSParameterAssert(indexPath || indexSet);
     
     NSMutableArray *tempArray = [self.dataSource mutableCopy];
     
@@ -312,7 +312,7 @@
 
 /** 替换相应数据源 */
 - (void)replaceDataSource:(NSIndexPath *)indexPath indexSet:(NSIndexSet *)indexSet newModel:(id)newModel{
-    NSParameterAssert(indexPath && indexSet);
+    NSParameterAssert(indexPath || indexSet);
     NSParameterAssert(newModel);
     
     NSMutableArray *tempArray = [self.dataSource mutableCopy];
@@ -349,7 +349,7 @@
  如果传进来的是 indexPath newModel 需要是 DWBaseTableDataSourceModel 对象
  */
 - (void)inserDataSource:(NSIndexPath *__nullable)indexPath indexSet:(NSIndexSet *__nullable)indexSet newModel:(id)newModel{
-    NSParameterAssert(indexPath && indexSet);
+    NSParameterAssert(indexPath || indexSet);
     NSParameterAssert(newModel);
     
     NSMutableArray *tempArray = [self.dataSource mutableCopy];

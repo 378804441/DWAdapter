@@ -343,6 +343,49 @@
 }
 
 
+/**
+ 插入相应数据源
+ 如果传进来的是 indexSet  (整条session替换), newModel 就一定要是 存有 DWBaseTableDataSourceModel 类型的 数组
+ 如果传进来的是 indexPath newModel 需要是 DWBaseTableDataSourceModel 对象
+ */
+- (void)inserDataSource:(NSIndexPath *__nullable)indexPath indexSet:(NSIndexSet *__nullable)indexSet newModel:(id)newModel{
+    NSParameterAssert(indexPath && indexSet);
+    NSParameterAssert(newModel);
+    
+    NSMutableArray *tempArray = [self.dataSource mutableCopy];
+    
+    if([self checkRowType] == DWBaseTableAdapterRow_grop){
+        NSParameterAssert(tempArray.count > 0 && tempArray[indexSet.firstIndex]);
+        NSParameterAssert(tempArray.count > 0 && tempArray[indexPath.section] && tempArray[indexPath.section][indexPath.row]);
+        
+        if (!IsNull(indexSet)) {
+            NSParameterAssert([newModel isKindOfClass:[NSArray class]] || [newModel isKindOfClass:[NSMutableArray class]]);
+            if (tempArray.count > indexSet.firstIndex) {
+                [tempArray insertObject:newModel atIndex:indexSet.firstIndex];
+            }
+            return;
+        }
+        
+        if (!IsNull(indexPath)) {
+            NSParameterAssert([newModel isKindOfClass:[DWBaseTableDataSourceModel class]]);
+            if (tempArray[indexPath.section].count > indexPath.row) {
+                [tempArray[indexPath.section] insertObject:newModel atIndex:indexPath.row];
+            }
+        }
+        
+    }else if([self checkRowType] == DWBaseTableAdapterRow_noGrop){
+        NSParameterAssert(indexPath && tempArray.count > 0 && tempArray[indexPath.row] && indexPath.section == 0);
+        NSParameterAssert([newModel isKindOfClass:[DWBaseTableDataSourceModel class]]);
+        if (tempArray.count > indexPath.row) {
+            [tempArray insertObject:newModel atIndex:indexPath.row];
+        }
+    }
+    
+    self.dataSource = [tempArray copy];
+}
+
+
+
 
 #pragma mark - private method
 

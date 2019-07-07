@@ -311,21 +311,20 @@
 
 
 /** 替换相应数据源 */
-- (void)replaceDataSource:(NSIndexPath *)indexPath indexSet:(NSIndexSet *)indexSet newModel:(id)newModel{
+- (NSArray *)replaceDataSource:(NSIndexPath *)indexPath indexSet:(NSIndexSet *)indexSet newModel:(id)newModel{
     NSParameterAssert(indexPath || indexSet);
     NSParameterAssert(newModel);
     
     NSMutableArray *tempArray = [self.dataSource mutableCopy];
     
     if([self checkRowType] == DWBaseTableAdapterRow_grop){
-        NSParameterAssert(tempArray.count > 0 && tempArray[indexSet.firstIndex]);
+        NSParameterAssert(tempArray.count > 0 && tempArray[[indexSet indexGreaterThanIndex:0]]);
         NSParameterAssert(tempArray.count > 0 && tempArray[indexPath.section] && tempArray[indexPath.section][indexPath.row]);
         
         if (!IsNull(indexSet)) {
             NSParameterAssert([newModel isKindOfClass:[NSArray class]] || [newModel isKindOfClass:[NSMutableArray class]]);
-            [tempArray replaceObjectAtIndex:indexSet.firstIndex withObject:newModel];
-            self.dataSource = [tempArray copy];
-            return;
+            [tempArray replaceObjectAtIndex:[indexSet indexGreaterThanIndex:0] withObject:newModel];
+            return [tempArray copy];
         }
         
         if (!IsNull(indexPath)) {
@@ -340,7 +339,7 @@
         [tempArray replaceObjectAtIndex:indexPath.row withObject:newModel];
     }
     
-    self.dataSource = [tempArray copy];
+    return [tempArray copy];
 }
 
 

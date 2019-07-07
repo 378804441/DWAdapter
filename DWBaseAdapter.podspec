@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DWBaseAdapter'
-  s.version          = '1.2.7'
+  s.version          = '1.2.8'
   s.summary          = 'A short description of DWBaseAdapter.'
   s.description      = <<-DESC
 		       进行tableView 拆分组件化轻量级框架

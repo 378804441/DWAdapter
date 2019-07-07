@@ -101,7 +101,7 @@ typedef NS_ENUM(NSInteger, DWBaseTableAdapterRowType){
  如果传进来的是 indexSet  (整条session替换), newModel 就一定要是 存有 DWBaseTableDataSourceModel 类型的 数组
  如果传进来的是 indexPath newModel 需要是 DWBaseTableDataSourceModel 对象
  */
-- (void)replaceDataSource:(NSIndexPath *__nullable)indexPath indexSet:(NSIndexSet *__nullable)indexSet newModel:(id)newModel;
+- (NSArray *)replaceDataSource:(NSIndexPath *)indexPath indexSet:(NSIndexSet *)indexSet newModel:(id)newModel;
 
 
 /**

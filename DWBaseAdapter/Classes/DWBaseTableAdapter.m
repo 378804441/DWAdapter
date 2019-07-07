@@ -356,13 +356,13 @@
     NSMutableArray *tempArray = [self.dataSource mutableCopy];
     
     if([self checkRowType] == DWBaseTableAdapterRow_grop){
-        NSParameterAssert(tempArray.count > 0 && tempArray[indexSet.firstIndex]);
+        NSParameterAssert(tempArray.count > 0);
         NSParameterAssert(tempArray.count > 0 && tempArray[indexPath.section] && tempArray[indexPath.section][indexPath.row]);
         
         if (!IsNull(indexSet)) {
             NSParameterAssert([newModel isKindOfClass:[NSArray class]] || [newModel isKindOfClass:[NSMutableArray class]]);
-            if (tempArray.count > indexSet.firstIndex) {
-                [tempArray insertObject:newModel atIndex:indexSet.firstIndex];
+            if (tempArray.count >= [indexSet indexGreaterThanIndex:0]) {
+                [tempArray insertObject:newModel atIndex:[indexSet indexGreaterThanIndex:0]];
             }
             self.dataSource = [tempArray copy];
             return;

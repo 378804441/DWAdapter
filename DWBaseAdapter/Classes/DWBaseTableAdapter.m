@@ -324,6 +324,7 @@
         if (!IsNull(indexSet)) {
             NSParameterAssert([newModel isKindOfClass:[NSArray class]] || [newModel isKindOfClass:[NSMutableArray class]]);
             [tempArray replaceObjectAtIndex:indexSet.firstIndex withObject:newModel];
+            self.dataSource = [tempArray copy];
             return;
         }
         
@@ -363,6 +364,7 @@
             if (tempArray.count > indexSet.firstIndex) {
                 [tempArray insertObject:newModel atIndex:indexSet.firstIndex];
             }
+            self.dataSource = [tempArray copy];
             return;
         }
         

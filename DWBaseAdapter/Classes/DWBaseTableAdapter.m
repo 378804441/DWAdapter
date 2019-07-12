@@ -329,7 +329,9 @@
         
         if (!IsNull(indexPath)) {
             NSParameterAssert([newModel isKindOfClass:[DWBaseTableDataSourceModel class]]);
-            [tempArray[indexPath.section] replaceObjectAtIndex:indexPath.row withObject:newModel];
+            NSMutableArray *tempSectionArray = [NSMutableArray arrayWithArray:tempArray[indexPath.section]];
+            [tempSectionArray replaceObjectAtIndex:indexPath.row withObject:newModel];
+            tempArray[indexPath.section] = [tempSectionArray copy];
         }
         
     }else if([self checkRowType] == DWBaseTableAdapterRow_noGrop){
@@ -369,7 +371,9 @@
         if (!IsNull(indexPath)) {
             NSParameterAssert([newModel isKindOfClass:[DWBaseTableDataSourceModel class]]);
             if (((NSArray *)tempArray[indexPath.section]).count > indexPath.row) {
+                NSMutableArray *tempSectionArray = [NSMutableArray arrayWithArray:tempArray[indexPath.section]];
                 [tempArray[indexPath.section] insertObject:newModel atIndex:indexPath.row];
+                tempArray[indexPath.section] = [tempSectionArray copy];
             }
         }
         

@@ -245,6 +245,15 @@
 //解析tableView 每组的 枚举类型
 - (id)rowTypeFromArray:(NSArray *)sourceArray indexPath:(NSIndexPath *)indexPath type:(DWBaseTableAdapterRowType)type{
     NSParameterAssert(indexPath && sourceArray.count > 0 && sourceArray[indexPath.section] && sourceArray[indexPath.section][indexPath.row]);
+   
+    if (indexPath.section >= sourceArray.count) {
+          return nil;
+    }
+      
+    if (indexPath.row >= ((NSArray *)sourceArray[indexPath.section]).count) {
+        return nil;
+    }
+    
     DWBaseTableDataSourceModel *dataSourceModel = sourceArray[indexPath.section][indexPath.row];
     return [self parsingDataSourceWithModel:dataSourceModel type:type];
 }
@@ -253,6 +262,8 @@
 //解析不是分组情况下
 - (id)noGroupRowTypeFromArray:(NSArray *)sourceArray indexPath:(NSIndexPath *)indexPath type:(DWBaseTableAdapterRowType)type{
     NSParameterAssert(indexPath && sourceArray.count > 0 && sourceArray[indexPath.row] && indexPath.section == 0);
+    if (indexPath.row >= sourceArray.count) return nil;
+    
     DWBaseTableDataSourceModel *dataSourceModel = sourceArray[indexPath.row];
     return [self parsingDataSourceWithModel:dataSourceModel type:type];
 }
